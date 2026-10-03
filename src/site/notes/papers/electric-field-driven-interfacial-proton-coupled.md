@@ -1,0 +1,59 @@
+---
+{"dg-publish":true,"permalink":"/papers/electric-field-driven-interfacial-proton-coupled/","title":"Electric Field-Driven Interfacial Proton-Coupled Electron Transfer in Protonated Polydopamine Junctions","tags":["neuromorphic","memristor","volatile-memristor","proton-conductor","pcet","polydopamine","molecular-electronics"],"dg-note-properties":{"title":"Electric Field-Driven Interfacial Proton-Coupled Electron Transfer in Protonated Polydopamine Junctions","slug":"electric-field-driven-interfacial-proton-coupled","venue":"JACS (submitted)","year":2026,"tags":["neuromorphic","memristor","volatile-memristor","proton-conductor","pcet","polydopamine","molecular-electronics"],"importance":4,"date_added":"2026-09-30","source_type":"pdf","tldr":"Asymmetric ITO/PDA-H+/eC/Cu junctions show unipolar volatile threshold switching driven by field-assisted interfacial proton-coupled electron transfer — slope ≈ 23.6, Vth ≈ 0.6 V, ≈ 300 pJ per event, ~10³ rectification, >10⁶-cycle endurance — with pulse-charge accounting and DFT arguing the switching comes from an interfacial dipole rather than bulk proton drift or a metal filament.","contribution_type":["method","analysis"],"datasets":[],"cited_by":[]}}
+---
+
+## Problem & Context
+
+Controlling proton transfer has become a general strategy for moving information and charge in organic/bioelectronics, solid-state ionics, electrochemical energy systems and neuromorphic computing. At the molecular scale protons travel either by vehicle diffusion of protonated species or by structural Grotthuss hopping along reconfiguring hydrogen-bond networks, and in functional devices the proton coordinate is often coupled to electronic states through proton-coupled electron transfer (PCET), so that proton translocation modulates carrier-injection barriers. The field's devices, however, had converged on bulk proton-conducting matrices, where simultaneous protonation and long-range migration through chemically disordered domains produce slow kinetics, high operating voltage and operational fatigue. Molecular-scale PCET had demonstrated striking interfacial phenomena — hysteretic negative differential resistance gated by local pH at a molecular/electrode contact — but achieving deterministic, sub-microsecond *volatile* conductance switching was still an open challenge. What was missing was a mechanism that turns interfacial proton dynamics into a sharp, repeatable, self-resetting threshold switch rather than a slow bulk ion-drift device or a static NDR element.
+
+## Key idea
+
+Make the junction chemically asymmetric and put the protons where the field is strongest. An electropolymerized polydopamine film is deliberately protonated (PDA-H+) and sandwiched between ITO (bottom) and evaporated carbon/copper (top); under positive top bias the sub-nanometer Helmholtz contact at ITO/PDA-H+ sees ~1 V/Å, which drives *interfacial* deprotonation of PDA-H+ and transfers protons onto ITO surface hydroxyl sites. The resulting localized ITO-OH2+ species form a compact, double-layer-like dipole that lowers the carrier-injection barrier and triggers a threshold-like transition to a low-resistance state; remove the bias and the interfacial protonation relaxes, so the device returns to its high-resistance state on its own — volatility as interfacial relaxation, not filament dissolution. At the carbon top contact the same process is unfavorable (the eC layer is inert, weakly basic, poorly hydrated), so no dipole forms, the device does not switch under negative bias, and the asymmetry itself produces the ~10³ rectification.
+
+## Method
+
+- **Film deposition**: pristine PDA electropolymerized on patterned ITO by potentiodynamic cycling −0.5 → +0.5 V vs SCE for 10 cycles (dopamine → dopamine-quinone cross-linking above ~+0.2 V; successive-cycle current decay shows the growing film passivates the electrode).
+- **Protonation**: chronoamperometry at +0.25 V for 60 s in 0.1 M HCl + 0.1 M KCl (pH ≈ 3), charging 2.73 µC/cm² — the wet-chemical proton dose that later reconciles with the pulse-switching charge.
+- **Chemical/structural checks**: CV with a [Fe(CN)₆]³⁻/⁴⁻ redox probe (reversible for PDA, suppressed after protonation); EIS fit to a Randles model gives Rct ≈ 1.14 kΩ (PDA) vs 65.6 kΩ (PDA-H+); XPS N 1s deconvolution (400 eV amine, 399 eV C=N, 401.6 eV protonated amine) shows the protonated-amine fraction rising while the backbone is preserved; AFM gives 2.6 nm roughness and thicknesses of 24.20 nm (PDA) / 23.29 nm (PDA-H+).
+- **Device**: 200 × 200 µm² crossbar — ITO stripe functionalized with PDA or PDA-H+, then 10 nm e-beam-evaporated carbon (eC, 0.1 Å/s) + 50 nm Cu (0.5 Å/s) through a shadow mask; ITO grounded, bias applied to the top electrode; ~60 pristine-PDA devices and ~100 PDA-H+ devices from ≥3 batches tested.
+- **Electrical protocol**: quasi-static DC sweeps with log-log slope fits and cumulative-distribution analysis of VSET; pulsed endurance to 10⁶ cycles (VSET = 2.7 V, Vread = 0.25 V); high-speed transients with 9 µs pulses, 250 ns symmetric edges, 1.25–2.75 V, integrating rising-edge (Qrise) and falling-edge (Qfall) charge separately; compliance current used to bound the ON state.
+- **Theory**: DFT (ωB97X-D3/def2-SVP) on a donor–acceptor hydrogen-bonded model under an explicit ~1 V/Å field, justified by the ~1–2 Å potential drop across the sub-nanometer contact.
+
+## Experiment & Results
+
+- **Pristine PDA is inert**: I–V overlay of 56 devices is symmetric and nearly linear below 0.3 V (low-bias resistance ~29.5 MΩ), nonlinear above 0.5 V as in molecular-wire junctions, with no switching; 3–4 of 60 devices became unstable/shorted after a few sweeps.
+- **PDA-H+ switches only under positive top bias**: unipolar volatile threshold switching reproducible for >600 consecutive sweeps (~2 h of continuous operation); 92 of ~100 devices showed reproducible threshold switching for ≥50 cycles. Low-bias resistance 28.6 MΩ, close to pristine, but the ON-state resistance is ~200× lower than pristine PDA at 1 V.
+- **Steep, uniform transition**: log-log analysis gives an off-state slope of 0.17 and a SET slope ≈ 23.6 — ~3 orders of magnitude of current growth over ~0.1 V — producing the ~10³ rectification ratio at ±1 V. Vth sits mostly between 0.5 and 1.1 V and follows a single Gaussian across junctions, samples and batches. ON conductance scales with the compliance current while Vth does not, i.e. the threshold is set by interfacial activation, not by the current limit.
+- **Endurance**: 10⁶ pulsed cycles with HRS ≈ 31.3 MΩ and LRS ≈ 30 kΩ held apart at a stable ~10³ ON/OFF ratio; the HRS baseline does not drift, unlike oxygen-vacancy/metal-ion VCM devices that show fatigue and cycle-to-cycle variation.
+- **Transients separate displacement current from conduction**: rising/falling edges produce displacement spikes scaling with dV/dt, while the 3–10 µs plateau is ohmic and independent of edge speed; the falling-edge spike (0.17–1.35 mA) is much smaller than the rising one, and turn-on relaxation *speeds up* with amplitude (340 → 210 ns) while turn-off stays at 320–360 ns — behavior inconsistent with a linear RC element and with a field that actively lowers the transport barrier.
+- **Charge accounting pins the mechanism to the interface**: Qrise grows from 3.55 to 10.67 µC/cm² with pulse amplitude while Qfall stays small; the surplus ΔQ = 0.67–5.29 µC/cm² corresponds to 4.2 × 10¹²–3.3 × 10¹³ protons/cm², quantitatively matching the 2.73 µC/cm² (≈1.70 × 10¹³ cm⁻²) electrochemical protonation dose. Normalizing to the ITO hydroxyl site density (Γ ≈ 3–5 × 10¹⁴ cm⁻²) gives 3–5% active sub-monolayer coverage — protons act at the ITO/PDA-H+ contact, not by bulk drift. Qrise is independent of rise time, so interfacial transfer completes within ~100 ns.
+- **Energy**: from the 1.25 V plateau the junction draws ~200 µW and consumes ≈ 300 pJ per switching event.
+- **DFT support**: the explicit interfacial field lowers the proton-transfer barrier from 4.61 eV to 0.42 eV, consistent with the polarity dependence and sub-microsecond kinetics.
+
+## Limitations
+
+- **Status: submitted to JACS and under review — not peer-reviewed or published at the time of ingestion.** There is no preprint (no arXiv ID), so no third party has verified the numbers, and all quantitative claims rest on the authors' own measurements.
+- No synaptic demonstration: the paper shows a volatile threshold switch, but no EPSC/STP traces, no spike-train response and no network task, so its neuromorphic relevance is at the device-phenotype level by analogy to the volatile-synapse literature.
+- Mechanism is inferred, not observed: the interfacial PCET assignment rests on charge balance, polarity asymmetry, non-RC relaxation and a DFT cluster model — there is no in-operando spectroscopy of the buried ITO/organic contact, and the "carbon contact is inert" explanation for the negative-bias asymmetry is qualitative.
+- Scale: 200 × 200 µm² devices defined by a shadow mask, far from crossbar densities; threshold-voltage spread of 0.4–1.1 V and a few percent of devices shorting (pristine) or failing the ≥50-cycle reproducibility bar remain.
+- Endurance is reported for a representative device; retention/volatility time constants are not systematically mapped as a function of materials or environment (humidity, hydration of the protonated film).
+
+## Open questions
+
+- Can interfacial PCET switching be scaled below the micrometer — lithographic crossbars rather than shadow masks — while keeping the 10⁶-cycle endurance and the ~10³ ON/OFF window?
+- Can the volatile relaxation time be engineered (protonation density, hydration, polymer cross-linking, top-contact chemistry) into the synapse-relevant ms–s band, and would the device then show genuine short-term plasticity or learning rules?
+- What actually sets the 0.4–1.1 V threshold spread — protonation uniformity, interface roughness, or contact-area statistics — and can it be narrowed to < 100 mV?
+- If the mechanism is truly interfacial, can the top contact be re-engineered (e.g. a hydroxyl-rich oxide instead of eC) to make the device switch on *both* polarities, or deliberately bipolar?
+- Can the dipole formation be watched directly — bias-dependent XPS/IR/Raman or operando spectroscopy at the ITO/PDA-H+ contact?
+- How do the ~200 µW operating power and 300 pJ/event scale with device area, and what is the ceiling for a molecular-scale version of the same contact?
+
+## My take
+
+The strongest part of this paper is that it argues mechanism with *accounting* rather than with a cartoon: integrating the pulse transients and reconciling the surplus charge with the independent electrochemical protonation dose — then normalizing to the known ITO hydroxyl site density to get a 3–5% sub-monolayer coverage — is a genuinely falsifiable chain that separates an interfacial process from bulk drift, and the dV/dt-vs-plateau pulse design plus the non-RC turn-on/turn-off asymmetry make the displacement/conduction separation clean. The DFT field argument (4.61 → 0.42 eV) is consistent but is the weakest link, since a ~1 V/Å cluster calculation rationalizes a barrier rather than measuring it. The honest gaps are the absence of any synaptic demonstration — the neuromorphic story is one step removed — and the µm-scale shadow-mask geometry, which keeps the result at the "existence proof for a molecular mechanism" stage rather than the "device technology" stage. As the anchor of this pipeline it is the right piece to build on: everything downstream (synapse demos, contact engineering, scaling) is a direct test of the interfacial PCET claim.
+
+## Related
+
+- [[concepts/interfacial-proton-coupled-electron-transfer-switching\|interfacial-proton-coupled-electron-transfer-switching]]
+- [[concepts/volatile-memristive-synapse\|volatile-memristive-synapse]]
+- [[people/tai-xuan-nguyen\|tai-xuan-nguyen]]
+- [[people/quyen-van-nguyen\|quyen-van-nguyen]]
