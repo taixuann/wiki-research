@@ -14,7 +14,13 @@
       "order": 40
     },
     "dg-timestamps": {
-      "order": 50
+      "order": 50,
+      "settings": {
+        "showCreated": true,
+        "showUpdated": true,
+        "timestampFormat": "MMM dd, yyyy h:mm a",
+        "dateFormat": "MMM dd, yyyy"
+      }
     }
   }
 }
