@@ -34,6 +34,20 @@
         "src/plugins/rounded-images/screenshot.png",
         "src/plugins/rounded-images/templates/style.njk"
       ]
+    },
+    "garden-stats": {
+      "repo": "oleeskild/garden-plugin-garden-stats",
+      "installedVersion": "1.0.0",
+      "installedRef": "v1.0.0",
+      "installedAt": "2026-10-03T15:17:55.873Z",
+      "enabled": true,
+      "files": [
+        "src/plugins/garden-stats/README.md",
+        "src/plugins/garden-stats/garden-plugin.json",
+        "src/plugins/garden-stats/index.js",
+        "src/plugins/garden-stats/styles/stats.scss",
+        "src/plugins/garden-stats/templates/stats.njk"
+      ]
     }
   }
 }
