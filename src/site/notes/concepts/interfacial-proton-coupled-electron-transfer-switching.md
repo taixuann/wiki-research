@@ -49,3 +49,15 @@ Builds on proton-coupled electron transfer as a general chemistry mechanism (con
 ## My understanding
 
 What makes this concept worth its own page rather than a bullet under volatile memristors is the accounting identity at its core: the charge that flows in the switching transient is the same charge that was electrochemically installed as protons, normalized against the electrode's own surface site density. That turns "protons are involved" from a slogan into a measurable conservation law, and it fixes the state variable's location (interface, not bulk) and its capacity (a sub-monolayer). If the identity survives scaling and operando verification, it gives the volatile-switching family a mechanism whose ON/OFF, polarity and endurance can be reasoned about chemically instead of only statistically.
+
+## Visual
+
+Mechanism animation (code-rendered with Manim — positions illustrative, motion topology exact):
+
+![](/img/pcet-mechanism.png)
+
+[Open the animation](/img/pcet-mechanism.mp4)
+
+Key numbers and comparison against the two neighbouring mechanisms:
+
+![](/img/pcet-numbers.png)
